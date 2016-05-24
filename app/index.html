@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Interview Challenge</title>
+    <meta name="description">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    
+  </head>
+  <body ng-app="jsangularNewCodeTestApp">
+    <div class="container">
+        <table class="table table-hover table-bordered" ng-controller="MainCtrl" ng-class="{show:showData}">
+            <thead>
+                <tr class="info">
+                    <th ng-click="sortData('id')">SNO <i class="fa fa-sort" aria-hidden="true"></i></th>
+                    <th ng-click="sortData('title')">Title <i class="fa fa-sort" aria-hidden="true"></i></th>
+                    <th ng-click="sortData('body')">Body <i class="fa fa-sort" aria-hidden="true"></i></th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="post in postsData | orderBy : sortValue:sortBool">
+                <tr class="info">
+                    <td>{{post.id}}</td>
+                    <td>{{post.title}}</td>
+                    <td>{{post.body}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>  
+    <script src="scripts/controllers/main.js"></script>
+        
+</body>
+</html>

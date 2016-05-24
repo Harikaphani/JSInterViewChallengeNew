@@ -1,0 +1,21 @@
+body {
+            padding: 10px;
+        }
+    table{      
+      display:none;
+    }
+    table.show{
+    display:block;
+    }
+    
+    th{
+      cursor:pointer;
+    }
+        
+        th:first-child {
+            display: inline-flex;
+        }
+        
+        .fa-sort {
+            margin: 3px 0 0 6px;
+        }
